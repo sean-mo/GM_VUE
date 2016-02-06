@@ -1,0 +1,27 @@
+@charset "UTF-8";
+//-----------------------------------------------------	
+// special scss
+//-----------------------------------------------------
+
+
+// rollIn
+@mixin animate-gradual-mask () {
+  @include keyframes(gradual-mask){
+    0% {
+      opacity: 0.3;
+      @include mask-image(-webkit-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)));
+      @include mask-image(-moz-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)));
+      @include mask-image(linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)));
+      @include mask-size(100% 20%);
+    }
+    100% {
+      opacity: 1;
+      @include mask-repeat(no-repeat);
+      @include mask-size(100% 200%);
+    }
+  }
+  .gradual-mask {
+    @include animation-name(gradual-mask);
+    @extend %animated;
+  }
+}

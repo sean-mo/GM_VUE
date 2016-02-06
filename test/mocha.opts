@@ -1,0 +1,10 @@
+--compilers js:babel-core/register
+--recursive
+--growl
+--timeout 15001
+--ui bdd
+--reporter mochawesome
+--reporter-options reportDir=testTarget/report,reportName=GM-test-report
+
+./testTarget/test
+

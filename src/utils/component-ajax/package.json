@@ -1,0 +1,20 @@
+{
+  "description": "Standalone AJAX library inspired by jQuery/zepto",
+  "gitHead": "d7e6a0579e7bf39e441a470baf2c68f39d84d4d6",
+  "homepage": "https://github.com/ForbesLindesay/ajax#readme",
+  "installable": true,
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "component-ajax",
+  "optionalDependencies": {},
+  "readme": "ajax\n====\n\nStandalone AJAX library inspired by jQuery/zepto\n\n## Installation\n\n[![component](https://component.jit.su/component-badge.svg)](https://component.jit.su/refer/ForbesLindesay/ajax)\n\n```\ncomponent-install ForbesLindesay/ajax\n```\n\nThen load using:\n\n```JavaScript\nvar ajax = require('ajax');\n```\n\nOr load using a script tag (downloads are available [here](https://component.jit.su/ForbesLindesay/ajax/download))\n\n```html\n<script src=\"ajax.min.js\"></script>\n```\n\nThen just refer to it in your script as `ajax`\n\n## API\n\n### ajax(url, settings)\n\n**url** A string containing the URL to which the request is sent.\n**settings** A set of key/value pairs that configure the Ajax request. All settings are optional. A default can be set for any option with `ajax.settings`. See ajax(settings) below for a complete list of all settings.\n\n### ajax(settings)\n\n**settings** A set of key/value pairs that configure the Ajax request. All settings are optional. A default can be set for any option with `ajax.settings`.\n\nFor a list of available settings see:\n\nhttp://api.jquery.com/jQuery.ajax/\n\n## License\n\n  MIT\n\n  If you find it useful, a payment via [gittip](https://www.gittip.com/ForbesLindesay) would be appreciated.\n\n![viewcount](https://viewcount.jepso.com/count/ForbesLindesay/ajax.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "url": "file:./src/utils/component-ajax"
+  },
+  "scripts": {
+    
+  },
+  "version": "0.0.2"
+}

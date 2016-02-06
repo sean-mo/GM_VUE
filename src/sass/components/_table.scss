@@ -1,0 +1,136 @@
+.table-scroll {
+    overflow: auto;
+}
+
+.table-panel {
+	@include size(100%, 35px, 35px);
+	border-bottom: #C5D0DC 1px solid;
+	margin-bottom: 1px;
+
+	li {
+
+		float: left;
+		padding: 0 10px 0 10px;
+		height: 34px;
+		line-height: 34px;
+		color: #999999;
+		background-color: #F9F9F9;
+		border-top: #C5D0DC 1px solid;
+		border-right: #C5D0DC 1px solid;
+		cursor: pointer;
+
+		&.selected {
+			color: #576373;
+			background-color: #ffffff;
+			border: #4C8FBD 1px solid;
+			border-bottom: #ffffff 1px solid;
+		}
+	}
+}
+
+.table-zebra {
+	table-layout: fixed;
+	min-width: 100%;
+
+	thead {
+		background-color: #fafafa;
+		color: #222222;
+		font-size: 13px;
+		cursor: pointer;
+		border: #e1e1e1 1px dotted;
+		border-bottom: #dddddd 1px solid;
+		text-shadow: #e1e1e1 1px 1px 1px;
+	}
+
+	th, td {
+		padding: 10px 15px 10px 15px;
+		white-space: nowrap;
+		font-weight: 100;
+
+	}
+
+	th {
+		padding: 10px 5px 10px 5px;
+		text-align: left;
+	}
+	tbody {
+		tr {
+			color: #333333;
+
+			&:nth-child(even){
+				background-color: #F6F9FC;
+			}
+
+			&:hover {
+				color: #ffffff;
+				background-color: #D96FA2;
+
+				a {
+					color: #ffffff;
+				}
+			}
+
+			&.success {
+				color: #333333;
+				background-color: #B6CAF9;
+			}
+
+			&.danger {
+				color: #333333;
+				background-color: rgba(255, 16, 34, 0.41);
+			}
+
+			&.partialFail {
+				color: #333333;
+				background-color: #FFEAEA;
+			}
+
+			&.cancel {
+				color: #222222;
+				background-color: #eeeeee;
+			}
+
+			@extend .slideInRight;
+			@include animation-timing-function(ease-out);
+
+			@for $i from 1 through 20 {
+				&:nth-child(#{$i}){
+				  	@include animation-duration(0.1s * $i);
+				}
+			}
+
+
+		}
+	}
+
+	&.animation {
+
+        tbody {
+        	tr {
+
+				@extend .slideInRight;
+				@include animation-timing-function(ease-out);
+
+				@for $i from 1 through 20 {
+					&:nth-child(#{$i}){
+						  @include animation-duration(0.2s * $i);
+					}
+				}
+			}
+        }
+
+	}
+
+}
+
+.table-users  {
+	th {
+		text-align: left;
+
+		a {
+			color: #ffffff;
+		}
+	}
+
+
+}

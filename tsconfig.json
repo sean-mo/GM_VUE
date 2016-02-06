@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "noLib": true,
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "watch": false,
+        "jsx": "react",
+        "suppressImplicitAnyIndexErrors": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "declaration": true,
+        "experimentalDecorators": true,
+        "sourceRoot": "src",
+        "outDir": "testTarget"
+    },
+    "exclude": [
+        "node_modules",
+        "plugins",
+        "testTarget",
+        "build"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "./*.js",
+    "./server/",
+  	"./config/**/*.js",
+  	"./src/templtae/'"
+  ],
+  "ext": "html js"
+}

@@ -1,0 +1,343 @@
+.form-box {
+
+}
+
+.form-text,.form-textarea, .form-select {
+	padding: 6px 2% 6px 2%;
+	background-color: #fdfdfd;
+	border: #CED0D1 1px solid;
+	border-radius: 3px;
+
+	&:focus {
+		@include box-shadow(inset rgba(0,0,0,0.2) 0 0 2px);
+		background-color: #ffffff;
+	}
+}
+
+.form-text-full {
+	width: 95%;
+}
+
+.form-select {
+	font-size: 14px;
+}
+
+.form-error {
+	padding: 3px 10px 3px 10px;
+	color: #EC1C1C;
+	border: #EC1C1C 1px solid;
+	margin-bottom: 10px;
+	background-color: #F7F4F4;
+	display: inline-block;
+	@extend .jello;
+}
+
+.form-dropdown {
+	position: relative;
+	z-index: 3;
+	@extend %inline-block;
+	color: #888888;
+	cursor: pointer;
+	overflow: hidden;
+	vertical-align: middle;
+	margin-right: 5px;
+
+	p {
+		position: relative;
+		min-width: 70px;
+		font-size: 14px;
+		padding: 5px 25px 5px 10px;
+		border: #CED0D1 1px solid;
+		border-radius: 3px;
+		background-color: #fdfdfd;
+
+		&:hover {
+				color: #222222;
+		}
+
+		i {
+			position: absolute;
+			right: 10px;
+			top: 8px;
+		}
+
+		.item {
+			display: inline-block;
+			padding: 0 8px 0 8px;
+			margin-right: 5px;
+			margin-bottom: 5px;
+			color: #ffffff;
+			background-color: #9A9EA5;
+			border-radius: 5px;
+			@include transition(transform 0.3s ease-in-out);
+
+			i {
+				position: static;
+				color: #ffffff;
+				cursor: pointer;
+			}
+
+			&:hover {
+				color: #ffffff;
+				background-color: #165AB6;
+				@extend .swing;
+				@include animation-duration(0.5s);
+
+				i {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+
+
+
+	label {
+		padding: 0 10px 0 10px;
+		display: block;
+		cursor: pointer;
+	}
+
+		ul {
+
+			position: absolute;
+			top: 65px;
+			left: 0;
+			background-color: #ffffff;
+			border-radius: 3px;
+			border: #e0e0e0 1px solid;
+			min-width: 150px;
+			max-height: 330px;
+			overflow-y: auto;
+			@include opacity(0);
+			@include box-shadow(rgba(0,0,0,0.1) 0 0 3px);
+			@include transition(all 0.1s ease-in);
+
+		}
+
+		li {
+			box-sizing: content-box;
+			@include size(auto, 35px, 35px);
+			border-bottom: #f2f2f2 1px solid;
+
+			&:hover {
+				color: #ffffff;
+				background-color: #4883D9;
+			}
+
+			&.first {
+				label {
+					padding-right: 5px;
+					display: inline;
+				}
+
+
+				.query-text {
+					width: 80%;
+					display: block;
+					padding: 4px 3px 4px 3px;
+					margin: 3px auto 3px auto;
+
+				}
+				.query-small-text {
+					display: inline;
+					width: 65%;
+
+				}
+
+				.btn {
+					display: inline-block;
+					margin: 2px 0 5px 0;
+				}
+
+				&:hover {
+					color: #333333;
+					background-color: #ffffff;
+				}
+
+
+			}
+		}
+
+		&.open {
+			overflow: visible;
+			z-index: 5;
+
+			ul {
+				top: 38px;
+				@include opacity(100);
+			}
+		}
+
+		&.multiple {
+			p {
+				padding-right: 20px;
+
+				i {
+					top: 10px;
+				}
+			}
+		}
+
+
+
+	}
+
+
+.form-block {
+	position: relative;
+	display: inline-block;
+	padding: 5px 0 5px 0;
+	width: 47%;
+	z-index: 1;
+	vertical-align: top;
+
+	.item {
+		display: block;
+		font-size: 14px;
+		color: #777777;
+		padding-bottom: 5px;
+	}
+
+	input, textarea, select {
+	}
+
+	.item-m {
+		margin-left: 5px;
+
+		input {
+			margin-right: 5px;
+		}
+	}
+
+	.item-text {
+		font-size: 16px;
+	}
+
+	.form-text,
+	.form-textarea {
+		width: 93%;
+
+	}
+
+	.form-disable {
+		background-color: #f1f1f1;
+		color: #888888;
+	}
+
+	@extend .pulse;
+	@include animation-timing-function(ease);
+
+	@for $i from 1 through 20 {
+		&:nth-child(#{$i}){
+			  @include animation-duration(0.08s * $i);
+		}
+	}
+
+
+}
+
+
+
+
+.form-block-full {
+	width: 100%;
+
+}
+
+.form-block-dropdown {
+    z-index: 3;
+	.form-block {
+		padding-top: 0;
+	}
+}
+
+.form-server {
+	z-index: 3;
+}
+
+.form-block-width-auto {
+	width: auto;
+	vertical-align: 4%;
+}
+
+.form-block-date {
+
+	.icon-times, .icon-calendar {
+		position: absolute;
+		bottom: 15px;
+		right: 5%;
+	}
+
+	.icon-times {
+		right: 12%;
+	}
+}
+
+.form-top {
+	z-index: 50;
+}
+
+.form-disabled {
+	background-color: #eeeeee;
+}
+
+.form-textarea-full {
+	width: 100%;
+
+	.form-textarea {
+		padding: 5px 5px 5px 5px;
+		height: 250px;
+		font-size: 14px;
+	}
+
+}
+
+.form-enumerate {
+	z-index: 7;
+	.form-block-dropdown {
+	    width: auto;
+		padding: 0;
+	}
+}
+
+.form-text-after-dropdown {
+	display: inline-flex;
+	width: 70%;
+	.form-text {
+	    width: 80%;
+	    height: 20px;
+	    font-size: 14px;
+	}
+	.submit-tick {
+		padding: 0 5px;
+		font-size: 30px;
+		line-height: 30px;
+		cursor: pointer;
+	}
+}
+
+.form-split {
+
+	padding: 0;
+	margin: 30px 0 30px 0;
+	border-top: #cccccc 2px solid;
+	text-align: center;
+
+	label {
+		position: relative;
+		top: -20px;
+		padding: 10px 10px 10px 10px;
+		font-size: 16px;
+		border: #cccccc 1px solid;
+		background-color: #ffffff;
+		box-shadow: #e1e1e1 1px 2px 1px;
+		border-radius: 5px;
+	}
+}
+
+.selector {
+    padding: 2px 8px !important;
+    border: transparent 1px solid;
+    font-size: 14px;
+}

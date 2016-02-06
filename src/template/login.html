@@ -1,0 +1,34 @@
+
+<% include 'partials/header.html' %>
+<div class="page-login" id="login"></div>
+<script type="text/vue" id="login-template">
+<h1>{{$t('login.title')}}</h1>
+  <div class="login-box">
+    <div class="border-top"></div>
+    <div class="login-box-body" v-on="keyup: login | key 'enter'">
+      <h2>Login</h2>
+      <p>
+        <label for="username">{{$t('login.username')}}</label>
+        <input type="text" name="username" class="login-text" v-class="login-text-error: userError" v-el="username" v-model="username" placeholder="{{$t('login.userText')}}" />
+      </p>
+      <p>
+        <label for="username">{{$t('login.pwd')}}</label>
+        <input type="password" name="password" class="login-text" v-class="login-text-error: pwdError"  v-el="password" v-model="password" placeholder="{{$t('login.pwdText')}}"  />
+      </p>
+      <p>
+        <label for="language">{{$t('login.selectLang')}}</label>
+        <select name="lang" class="form-select" v-model="language" v-on="change: changeLanguage($event)">
+          <option value="cn">{{$t('login.cn')}}</option>
+          <option value="vietnam">{{$t('login.vietnam')}}</option>
+        </select>
+      </p>
+    </div>
+
+    <div class="login-box-footer">
+      <span class="error" v-if="errormsg">{{errormsg}}</span>
+      <a href="javascript:void(0);" class="login-box-button" v-on="click: login()">Login</a>
+    </div>
+  </div>
+</script>
+<script src="js/login.js"></script>
+<% include 'partials/footer.html' %>

@@ -1,0 +1,41 @@
+@function convert-rem($px){//$px为需要转换的字号
+   @if unitless($px) {
+     @return $px / $baseFontSize * 1rem;
+   } @else {
+     @return $px;
+   }
+}
+
+@mixin font-size-rem($px){
+    font-size: $px / $baseFontSize * 1rem;
+    
+}
+
+
+@mixin remCalc($property, $values...) {
+  $max: length($values);//返回$values列表的长度值
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: nth($values, $i);//返回$values列表中的第$i个值，并将单位值去掉
+    $baseFontSize: $baseFontSize;
+    $pxValues: #{$pxValues + $value}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  } 
+
+  @for $i from 1 through $max {
+    $value: nth($values, $i);
+    $remValues: #{$remValues + convert-rem($value)};
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  } 
+
+  #{$property}: $pxValues; 
+  #{$property}: $remValues; 
+}

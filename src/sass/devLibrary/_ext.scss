@@ -1,0 +1,18 @@
+@charset "UTF-8";
+//-----------------------------------------------------	
+// function scss
+// 提供所有的基础功能包括：变量设置，css3前缀填充，@media，基础mixin，栅格化grid
+// 默认不会解析出任何样式
+//-----------------------------------------------------
+
+
+
+// 导入所有功能类相关文件
+//-----------------------------------------------------
+
+
+@import "ext/btn";
+@import "ext/helper";
+@import "ext/message";
+@import "ext/typography";	
+@import "ext/font-face/font-face";

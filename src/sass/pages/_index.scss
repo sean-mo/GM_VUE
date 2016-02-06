@@ -1,0 +1,115 @@
+.select-games {
+	padding: 20px 20px 20px 20px;
+	background-color: #F0F1F2;
+	border-bottom: #e1e1e1 1px solid;
+
+	li {
+
+		padding: 5px 10px 5px 10px;
+		background-color: #D4E5EE;
+		color: #666666;
+	    display: inline-block;
+	    cursor: pointer;
+	    font-size: 16px;
+
+		&:hover,
+		&.selected {
+			color: #ffffff;
+			background-color: #4799D2;
+			box-shadow: rgba(0,0,0,0.2) 0 0 2px;
+		}
+	}
+}
+
+.authorization-box {
+	margin: 10px 0 10px 0;
+	border-top: #e1e1e1 1px solid;
+	border-bottom: #e1e1e1 1px solid;
+
+
+	h3 {
+		padding: 5px 0 5px;
+	}
+
+	.selector {
+		padding: 8px 10px 8px 10px;
+	    border: #eeeeee 1px solid;
+	    font-size: 14px;
+	    box-shadow: #eeeeee 1px 1px 2px;
+	}
+
+	.tools {
+		padding: 10px 0 10px 0;
+		.selector {
+			padding: 5px 0 5px 0;
+			margin: 0 3px 0 10px;
+			border: #cccccc 1px solid;
+		}
+	}
+
+	.link-selector {
+		font-size: 14px;
+	}
+}
+
+.authorization-list {
+    font-size: 14px;
+
+	li {
+		margin: 10px 0 5px 0;
+		border: #e1e1e1 1px solid;
+		border-bottom: 0;
+		font-size: 14px;
+	}
+
+	span {
+		color: #999999;
+
+		&.color1 {
+			color: #0000FF;
+		}
+
+		&.color2 {
+			color: #FF7F00;
+		}
+		&.color3 {
+			color: #C33728;
+		}
+	}
+
+	.group {
+		border-bottom: #e1e1e1 1px solid;
+		padding: 10px 10px 10px 10px;
+		background-color: #f7f7f7;
+	}
+
+	.child {
+		border-bottom: #e1e1e1 1px solid;
+		strong {
+			font-weight: 100;
+		}
+
+		p,
+        label {
+			padding: 10px 10px 10px 10px;
+			display: inline-block;
+		}
+	}
+}
+
+.authorization-zone-list {
+	li {
+		border: 0;
+	}
+
+	.group {
+		display: inline-block;
+	}
+}
+
+.conf-box {
+	margin-bottom: 8px;
+    border-top: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+}

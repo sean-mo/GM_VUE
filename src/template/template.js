@@ -1,0 +1,1 @@
+import loginTPL 	from './login.html';

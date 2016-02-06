@@ -1,0 +1,13 @@
+.icon-border-arrowUp {
+	@include inline-block;
+	@include size(0, 0);
+	border: transparent 4px solid;
+	border-bottom-color: #dadada; 
+}
+
+.icon-minus-square-o, 
+.icon-plus-square-o {
+	font-size: 16px;
+	cursor: pointer;
+}
+

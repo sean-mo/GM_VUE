@@ -1,0 +1,243 @@
+@charset "UTF-8";
+//-----------------------------------------------------	
+// attention seekers scss
+//-----------------------------------------------------
+
+
+//bounce
+@mixin animate-bounce () {
+  @include keyframes(bounce){
+    0%, 20%, 50%, 80%, 100% {
+      @include translateY(0);
+    }
+
+    40% {
+      @include translateY(-30px);
+    }
+
+    60% {
+      @include translateY(-15px);
+    }  
+  }
+  .bounce {
+    @include animation-name(bounce);
+    @extend %animated;
+  }
+}
+
+// flash
+@mixin animate-flash () {
+  @include keyframes(flash){
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+
+    25%, 75% {
+      opacity: 0;
+    }  
+  }
+  .flash {
+    @include animation-name(flash);
+    @extend %animated;
+  }
+}
+
+// rubberBand 
+@mixin animate-rubberBand  () {
+  @include keyframes(rubberBand){
+    0% {
+      @include scale3D(1, 1, 1);
+    }
+
+    30% {
+      @include scale3D(1.25, 0.75, 1);
+    }
+
+    40% {
+      @include scale3D(0.75, 1.25, 1);
+    }
+
+    50% {
+      @include scale3D(1.15, 0.85, 1);
+    }
+
+    65% {
+      @include scale3D(.95, 1.05, 1);
+    }
+
+    75% {
+      @include scale3D(1.05, .95, 1);
+    }
+
+    100% {
+      @include scale3D(1, 1, 1);
+    }
+  }
+  .rubberBand {
+    @include animation-name(rubberBand);
+    @extend %animated;
+  }
+}
+
+
+// pulse
+@mixin animate-pulse () {
+  @include keyframes(pulse){
+    0% {
+      @include scale(1);
+    }
+    50% {
+      @include scale(1.3);
+    }
+    100% {
+      @include scale(1);
+    }
+  }
+  .pulse {
+    @include animation-name(pulse);
+    @extend %animated;
+  }
+}
+
+// shake
+@mixin animate-shake () {
+  @include keyframes(shake){
+    0%,100%{
+      @include translateX(0);
+    }
+    10%,30%,50%,70%,90%{
+      @include translateX(-10px);
+    }
+    20%,40%,60%,80%{
+      @include translateX(10px);
+    }
+  }
+  .shake {
+    @include animation-name(shake);
+    @extend %animated;
+  }
+}
+
+// swing
+@mixin animate-swing () {
+  @include keyframes(swing){
+    20% {
+      @include rotate(15deg);
+    }
+    40%{
+      @include rotate(-10deg);
+    }
+    60% {
+      @include rotate(5deg);
+    }
+    80% {
+      @include rotate(-5deg);
+    }
+    100% {
+      @include rotate(0deg);
+    }
+  }
+  .swing {
+    @include transform-origin(top center);
+    @include animation-name(swing);
+    @extend %animated;
+  }
+}
+
+// tada
+@mixin animate-tada () {
+  @include keyframes(tada){
+    0% {
+      @include scale(1);
+    }
+    10%,20% {
+      @include transform(scale(.9) rotate(-3deg));
+    }
+    30%,50%,70%,90%{
+      @include transform(scale(1.1) rotate(3deg));
+    }
+    40%,60%,80%{
+      @include transform(scale(1.1) rotate(-3deg));
+    }
+    100%{
+      @include transform(scale(1) rotate(0));
+    }
+  }
+  .tada {
+    @include animation-name(tada);
+    @extend %animated;
+  }
+}
+
+
+// wobble
+@mixin animate-wobble () {
+  @include keyframes(wobble){
+    0% {
+      @include translateX(0%);
+    }
+    15% {
+      @include transform(translateX(-25%) rotate(-5deg));
+    }
+    30% {
+      @include transform(translateX(20%) rotate(3deg));
+    }
+    45% {
+      @include transform(translateX(-15%) rotate(-3deg));
+    }
+    60% {
+      @include transform(translateX(10%) rotate(2deg));
+    }
+    75% {
+      @include transform(translateX(-5%) rotate(-1deg));
+    }
+    100% {
+      @include translateX(0%);
+    }
+  }
+  .wobble {
+    @include animation-name(wobble);
+    @extend %animated;
+  }
+}
+
+
+// jello
+@mixin animate-jello () {
+  @include keyframes(jello){
+      11.1% {
+        @include transform(none);
+      }
+
+      22.2% {
+        @include transform(skewX(-12.5deg) skewY(-12.5deg));
+      }
+      33.3% {
+        @include transform(skewX(6.25deg) skewY(6.25deg));
+      }
+      44.4% {
+        @include transform(skewX(-3.125deg) skewY(-3.125deg));
+      }
+      55.5% {
+        @include transform(skewX(1.5625deg) skewY(1.5625deg));
+      }
+      66.6% {
+        @include transform(skewX(-0.78125deg) skewY(-0.78125deg));
+      }
+      77.7% {
+        @include transform(skewX(0.390625deg) skewY(0.390625deg));
+      }
+      88.8% {
+        @include transform(skewX(-0.1953125deg) skewY(-0.1953125deg));
+      }
+      100% {
+        @include transform(none);
+      }
+  }
+  .jello {
+    @include transform-origin(center);
+    @include animation-name(jello);
+    @extend %animated;
+  }
+}
+

@@ -1,0 +1,120 @@
+.page-login {
+	@include size(100%, auto);
+	min-height: 800px;
+	background: url(images/grid.png);
+
+	h1 {
+		padding: 50px 0 50px 0;
+		font-size: 20px;
+		font-weight: 700;
+		text-align: center;
+		color: #ffffff;
+		text-shadow: rgba(0,0,0,0.8) 0 0 5px;
+        @extend .bounceInUp;
+	    animation-duration: 1s;
+
+	}
+}
+
+.login-box {
+	margin: 0 auto 0 auto;
+	@include size(800px, auto);
+	background-color: #ffffff;
+	color: #8a92a5;
+	border-radius: 5px;
+	border-bottom: #d9dde5 1px solid;
+	overflow: hidden;
+	@extend .bounceInUp;
+	animation-duration: 0.8s;
+
+	.border-top {
+		@include size(100%, 8px);
+		background: url(images/login-accent-bar.png) repeat-x;
+	}
+}
+
+.login-box-body {
+	padding: 25px 40px 25px 40px;
+	color: #8a92a5;
+	border-bottom: #d9dde5 1px solid;
+
+	h2 {
+		margin-bottom: 20px;
+		font-size: 26px;
+		font-weight: 400;
+	}
+
+
+	p {
+		margin: 5px 0 5px 0;
+		font-size: 16px;
+	}
+
+	label {
+		display: block;
+		width: 100%;
+	}
+
+	.login-text {
+		width: 95%;
+		margin: 10px 0 10px 0;
+		padding: 13px 15px 12px 10px;
+		border: #cccccc 1px solid;
+		transition: box-shadow 0.1s linear;
+
+		&:focus {
+			box-shadow: inset #e1e1e1 1px 1px 1px;
+		}
+	}
+
+	.login-text-error {
+		border: #ff0000 1px solid;
+	}
+}
+
+.login-box-button {
+	  margin: 0 auto 0 auto;
+	  padding: 10px 35px 10px 35px;
+	  color: inherit;
+	  text-transform: inherit;
+	  font-weight: inherit;
+	  font-family: stratum-1-web,sans-serif;
+	  font-size: 13px;
+	  border: 1px solid #b4b9c5;
+	  background-color: #eef0f7;
+	  background-image: -webkit-linear-gradient(#f3f5fa,#e6e9f3);
+	  background-image: linear-gradient(#f3f5fa,#e6e9f3);
+	  box-shadow: 0 1px 3px rgba(105,114,138,0.2),inset 0 1px #fff,inset 0 -2px rgba(0,0,0,0.05);
+	  transition: all 0.2s linear;
+
+	  &:hover {
+	  	padding: 10px 45px 10px 45px;
+	  	color: #666666;
+	  	background-color: #f5f6fa;
+		background-image: -webkit-linear-gradient(#fff,#e6e9f3);
+		background-image: linear-gradient(#fff,#e6e9f3);
+		border-color: #9ea3ae;
+	  }
+}
+
+
+
+.login-box-footer {
+	border-top: 1px solid #fff;
+ 	background-color: #f3f5fa;
+ 	padding: 25px 40px 25px 30px;
+ 	height: 20px;
+ 	font-size: 13px;
+ 	font-weight: bold;
+	text-align: right;
+  	font-family: stratum-1-web,sans-serif;
+  	text-transform: uppercase;
+  	color: #8a92a5;
+
+  	.error {
+  		border-width: 1px;
+  		font-weight: 100;
+  		margin-right: 20px;
+  		@extend .slideInLeft;
+  	}
+}

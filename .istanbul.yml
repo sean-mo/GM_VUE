@@ -1,0 +1,15 @@
+verbose: false
+instrumentation:
+  root: ./testTarget/src
+  default-excludes: true
+  excludes: []
+reporting:
+    print: summary
+    reports:
+        - html
+    dir: ./testTarget/coverage
+    watermarks:
+        statements: [50, 80]
+        lines: [50, 80]
+        functions: [50, 80]
+        branches: [50, 80]

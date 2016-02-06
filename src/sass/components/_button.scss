@@ -1,0 +1,72 @@
+.btn {
+	padding: 0 10px 0 10px;
+	border: 0; 
+	font-size: 14px;
+	vertical-align: middle;
+
+	@include gradient-vertical(#ffffff,#F9F9FA, #F3F4F6);
+	border: #CED0D1 1px solid;
+
+	&:hover {
+		@include gradient-vertical(darken(#ffffff, 3%), darken(#F9F9FA, 3%), darken(#F3F4F6, 3%));
+	}
+}
+
+.btn-primary { 
+	@include gradient-vertical(#6FADD9,#5DA1D4, #4A93CC);
+	border: #3F80B6 1px solid;
+
+	&:hover {
+		@include gradient-vertical(darken(#6FADD9, 10%), darken(#5DA1D4, 10%), darken(#4A93CC, 10%));
+	}
+}
+
+.btn-disabled {
+	background: #f7f7f7;
+	color: #bbbbbb;
+	border: #e1e1e1 1px solid;
+	cursor: default;
+	&:hover {
+		background: #f7f7f7;
+		color: #bbbbbb;
+	}
+}
+
+.btn-success {
+	
+	@include btn-color(#5cb85c, #ffffff);    
+	&:hover {
+		@include gradient-vertical(darken(#5cb85c, 10%), darken(#5cb85c, 10%), darken(#5cb85c, 10%));
+	}
+}
+
+.btn-info {
+	@include gradient-vertical(#6FADD9,#5DA1D4, #4A93CC);
+	color: #333333;  
+	&:hover {
+		@include gradient-vertical(darken(#5bc0de, 10%), darken(#5bc0de, 6%), darken(#5bc0de, 2%));
+	}
+}
+
+.btn-warning {
+	@include btn-color(#f0ad4e, #ffffff);    
+	&:hover {
+		@include gradient-vertical(darken(#f0ad4e, 10%), darken(#f0ad4e, 10%), darken(#f0ad4e, 10%));
+	}
+}
+
+.btn-danger {
+	@include btn-color(#d9534f, #ffffff);    
+	&:hover {
+		@include gradient-vertical(darken(#d9534f, 10%), darken(#d9534f, 10%), darken(#d9534f, 10%));
+	}
+}
+
+.btn-big-primary {
+	@extend .btn-primary;
+	margin: 0 auto 0 auto;
+	display: block;
+	max-width: 300px;
+	min-width: 200px;
+	padding: 3px 15px 3px 15px;
+}

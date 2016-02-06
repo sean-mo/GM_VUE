@@ -1,0 +1,20 @@
+// 设置width, height, line-height 
+
+@mixin size($width: auto, $height: auto, $lineheight: auto) {
+    @if $width != auto        {  width      : $width;      }
+    @if $height != auto       {  height     : $height; 	   }
+    @if $lineheight != auto   {  line-height: $lineheight; }
+}
+
+
+@mixin size-rem($width: auto, $height: auto, $lineheight: auto) {
+    @if $width != auto  	         {  
+    	width      : convert-rem($width);
+    }
+    @if $height != auto  	         {  
+    	height      : convert-rem($height);
+    }
+    @if $lineheight != auto  	         {  
+    	line-height : convert-rem($lineheight);
+    }
+} 
